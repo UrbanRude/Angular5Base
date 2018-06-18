@@ -20,8 +20,7 @@ import { PagesModule } from './pages/pages.module';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    MaterialModule, 
+    BrowserAnimationsModule, 
     FormsModule,
     APP_ROUTES,
     PagesModule

@@ -3,6 +3,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { PAGES_ROUTES } from "./pages.routes";
 import { SharedModule } from "../shared/shared.module";
 import { PagesComponent } from "./pages.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     declarations:[
@@ -15,7 +16,8 @@ import { PagesComponent } from "./pages.component";
     ],
     imports:[
         PAGES_ROUTES,
-        SharedModule
+        SharedModule,
+        FormsModule
     ]
 })
 

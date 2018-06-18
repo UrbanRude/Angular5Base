@@ -1,3 +1,24 @@
-<p>
-  sidenav works!
-</p>
+<aside class="left-sidebar">
+    <div class="scroll-sidebar">
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li> <a href="#" (click)="showFiller = !showFiller"><mat-icon>dashboard</mat-icon>Dahsboard</a>
+                    <ul *ngIf="showFiller">
+                        <li><a href="#">Minimal </a></li>
+                        <li><a href="#">Analytical</a></li>
+                        <li><a href="#">Demographical</a></li>
+                        <li><a href="#">Modern</a></li>
+                    </ul>
+                </li>
+                <li> <a href="#" >Dashboard</a>
+                    <ul>
+                        <li><a href="#">Missnimal </a></li>
+                        <li><a href="#">Analystical</a></li>
+                        <li><a href="#">Demsssographical</a></li>
+                        <li><a href="#">Mossdern</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>

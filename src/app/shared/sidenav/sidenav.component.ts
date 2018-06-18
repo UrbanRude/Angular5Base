@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  showFiller:boolean;
+
+  constructor() { this.showFiller = false; }
 
   ngOnInit() {
   }
