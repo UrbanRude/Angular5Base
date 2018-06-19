@@ -1,10 +1,11 @@
-<div id="main-wrapper">
+<div class="main-wrapper">
     <app-header></app-header>
-    <app-sidenav></app-sidenav>
-    <div class="page-wrapper">
-        <div class="container-fluid">
+    <div class="principal-content">
+        <app-sidenav></app-sidenav>
+        <div class="components-rigth" [style.margin-left]="marginLeft">
             <app-breadcrumbs></app-breadcrumbs>            
-            <router-outlet></router-outlet>        
-         </div>
-    </div>   
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
+

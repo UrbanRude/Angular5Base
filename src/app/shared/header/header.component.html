@@ -1,6 +1,16 @@
 <mat-toolbar>
   <div class="logo">
-    <img src="./assets/images/walmart.png" alt="">
+    <mat-icon (click)="showSideNav($event)">
+      menu
+    </mat-icon>
+    <div>
+      <img src="./assets/images/walmart.png" alt="">
+    </div>
   </div>
-    <span class="title">My Application</span>
-  </mat-toolbar>
+  <span class="title">Angular 5 Base Walmart</span>
+  <div class="items-header">
+    <mat-icon>home</mat-icon>
+    <mat-icon>message</mat-icon>
+    <img src="./assets/images/logo-perfil.png" alt="" class="perfil">
+  </div>
+</mat-toolbar>

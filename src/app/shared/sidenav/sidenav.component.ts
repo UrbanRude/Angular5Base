@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CollapseService } from '../../services/collapse.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -7,11 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  showFiller:boolean;
+  showSideNav:boolean = true;  
+  showDashboard:boolean = false;
+  showServices:boolean = false;
 
-  constructor() { this.showFiller = false; }
+  constructor( private _collapse:CollapseService ) { }
 
   ngOnInit() {
+    this._collapse.getEventShow().subscribe( event => {
+      event.isTrusted ? this.showSideNav = !this.showSideNav : this.showSideNav = false;
+    });
   }
 
 }

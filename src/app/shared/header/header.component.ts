@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { CollapseService } from '../../services/collapse.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _collapse:CollapseService) { }
 
   ngOnInit() {
+  }
+
+  showSideNav(event:Event){
+    this._collapse.setShow( event );
   }
 
 }

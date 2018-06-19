@@ -1,5 +1,6 @@
 /**
  * ARCHIVO PARA CARGAR LOS COMPONENTES
+ * DE ANGULAR MATERIAL
  */
 
 import { NgModule } from "@angular/core";
@@ -12,7 +13,8 @@ import { MatButtonModule,
          MatProgressBarModule,
          MatListModule,
          MatIconModule,
-         MatCardModule } from '@angular/material';
+         MatCardModule, 
+         MatGridListModule} from '@angular/material';
 
 @NgModule({
     imports:[
@@ -23,7 +25,8 @@ import { MatButtonModule,
         MatProgressBarModule,
         MatListModule,
         MatIconModule,
-        MatCardModule
+        MatCardModule,
+        MatGridListModule
     ],
     exports:[
         MatButtonModule,
@@ -33,7 +36,8 @@ import { MatButtonModule,
         MatProgressBarModule,
         MatListModule,
         MatIconModule,
-        MatCardModule
+        MatCardModule,
+        MatGridListModule
     ]
 })
 

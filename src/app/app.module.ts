@@ -9,6 +9,9 @@ import { MaterialModule } from './material.module';
 /* SECCION PARA IMPORTAR RUTAS */
 import { APP_ROUTES } from './app.routes';
 
+/* SECCION PARA IMPORTAR SERVICIOS */
+import { APP_PROVIDERS } from './app.providers';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PagesModule } from './pages/pages.module';
@@ -25,7 +28,9 @@ import { PagesModule } from './pages/pages.module';
     APP_ROUTES,
     PagesModule
   ],
-  providers: [],
+  providers: [
+    APP_PROVIDERS
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,19 +1,29 @@
 mat-toolbar{
-    padding: 0px;
-    margin: 0px;
-    position: relative; 
     display: flex;
-    width: 100%;
-    height: 70px;
-    background-color:#fff;   
-}       
+    justify-content: space-between;
+    background-color: #004B77;
+    color: #fff;
+} 
+
+mat-toolbar .logo{
+    display: flex;
+}
+
+mat-toolbar .logo mat-icon{
+    margin-top: 13px;
+}
 
 mat-toolbar .logo img{
     width: 120px;
-    margin-left: 50px;
+    margin-left: 20px;
     margin-top: 10px;
 }
 
-.title{
-    height: 100%;
+mat-toolbar .items-header{
+    margin-left: 10px;
+}
+
+mat-toolbar .items-header img{
+    width: 30px;
+    border-radius: 100%;
 }

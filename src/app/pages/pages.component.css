@@ -1,6 +1,9 @@
-.container-fluid{
-    padding: 50px;
-    margin: 0%;
-    margin-left: 250px;
-    background: #67757c;
+.principal-content{
+    display: flex;
 }
+.components-rigth{
+    /* margin-left: 150px; */
+    display: flex;
+    flex-direction: column;
+}
+

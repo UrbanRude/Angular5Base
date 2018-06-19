@@ -1,24 +1,29 @@
-<aside class="left-sidebar">
-    <div class="scroll-sidebar">
-        <nav class="sidebar-nav">
-            <ul id="sidebarnav">
-                <li> <a href="#" (click)="showFiller = !showFiller"><mat-icon>dashboard</mat-icon>Dahsboard</a>
-                    <ul *ngIf="showFiller">
-                        <li><a href="#">Minimal </a></li>
-                        <li><a href="#">Analytical</a></li>
-                        <li><a href="#">Demographical</a></li>
-                        <li><a href="#">Modern</a></li>
-                    </ul>
-                </li>
-                <li> <a href="#" >Dashboard</a>
-                    <ul>
-                        <li><a href="#">Missnimal </a></li>
-                        <li><a href="#">Analystical</a></li>
-                        <li><a href="#">Demsssographical</a></li>
-                        <li><a href="#">Mossdern</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
+<aside *ngIf="showSideNav" class="left-sidebar animated bounceInLeft">
+    <ul  class="list-items">
+        <li>
+            <button mat-button (click)="showDashboard = !showDashboard" >
+                <mat-icon>dashboard</mat-icon>
+                <span>Dashboard</span>
+            </button>
+        </li>
+        <mat-divider></mat-divider>
+        <div *ngIf="showDashboard">
+            <li>
+                <button mat-button style="text-align: center;">Grafica</button>
+            </li>
+            <mat-divider></mat-divider>
+        </div>
+        <li>
+            <button mat-button (click)="showServices = !showServices" >
+                <mat-icon>business</mat-icon>
+                <span>Services</span>
+            </button> 
+        </li>
+        <mat-divider></mat-divider>
+        <div *ngIf="showServices">
+            <li>
+                <button mat-button style="text-align: center;">Services</button>
+            </li>
+        </div>
+    </ul>
 </aside>
