@@ -2,9 +2,9 @@
     padding: 0px;
     position: absolute;
     width: 140px;
-    height: 90%;
+    height: 100%;
     color: #606161;
-    background-color: #F2F2F2;
+    /* background-color: #F2F2F2; */
   }
 
 .list-items{

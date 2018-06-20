@@ -4,6 +4,7 @@ import { PAGES_ROUTES } from "./pages.routes";
 import { SharedModule } from "../shared/shared.module";
 import { PagesComponent } from "./pages.component";
 import { FormsModule } from "@angular/forms";
+import { MaterialModule } from "../material.module";
 
 @NgModule({
     declarations:[
@@ -17,7 +18,8 @@ import { FormsModule } from "@angular/forms";
     imports:[
         PAGES_ROUTES,
         SharedModule,
-        FormsModule
+        FormsModule,
+        MaterialModule
     ]
 })
 
