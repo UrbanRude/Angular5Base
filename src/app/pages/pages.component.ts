@@ -10,15 +10,9 @@ import { CollapseService } from "../services/collapse.service";
 
 export class PagesComponent implements OnInit {
     
-    marginLeft:string = "150px";
-
     constructor(private _collapse:CollapseService) { }
 
     ngOnInit(){
-        this._collapse.getEventShow().subscribe(event => {
-            console.log( event );
-            event.isTrusted ? this.marginLeft = "10px" : this.marginLeft = "150px";
-        });
     }
 
  }
