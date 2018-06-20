@@ -4,5 +4,6 @@
 }
 .components-rigth{
     flex-direction: column;
+    margin: auto;
 }
 
