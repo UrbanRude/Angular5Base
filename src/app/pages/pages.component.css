@@ -1,9 +1,8 @@
 .principal-content{
     display: flex;
+    width:100%;
 }
 .components-rigth{
-    /* margin-left: 150px; */
-    display: flex;
     flex-direction: column;
 }
 
