@@ -1,0 +1,38 @@
+.card-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.card-login .content-logo{
+    display: flex;
+}
+
+.card-login img{
+    
+    height: 200px;
+    width: 200px;
+}
+
+.button-login{
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.button-login{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.button-login mat-icon{
+    margin-left: 20px;
+}

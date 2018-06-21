@@ -8,7 +8,7 @@ const pagesRoutes: Routes = [
         path: '',
         component: PagesComponent,
         children:[
-            { path:'dashbdoard', component:DashboardComponent}
+            { path:'dashboard', component:DashboardComponent}
         ]
     }
 ];

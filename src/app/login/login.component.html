@@ -1,3 +1,15 @@
-<p>
-  login works!
-</p>
+<mat-card class="container card-login">
+  <mat-card-title class="content-logo">
+    <h3>Login</h3>
+    <img src="./assets/images/walmart.png" alt="">
+  </mat-card-title>
+<mat-form-field>
+  <input matInput placeholder="User" [(ngModel)]="user"/>
+</mat-form-field>
+<mat-form-field>
+      <input matInput type="password"  placeholder="Password" [(ngModel)]="ppass"/>
+</mat-form-field>
+<div class="button-login">
+  <button mat-button (click) = "sendLogin()" class="mdl-button--raised mdl-button--colored">Login<mat-icon>send</mat-icon></button>
+</div>
+</mat-card>

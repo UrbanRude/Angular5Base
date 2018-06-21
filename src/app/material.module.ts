@@ -14,7 +14,9 @@ import { MatButtonModule,
          MatListModule,
          MatIconModule,
          MatCardModule, 
-         MatGridListModule} from '@angular/material';
+         MatGridListModule,
+         MatTableModule,
+         MatPaginatorModule} from '@angular/material';
 
 @NgModule({
     imports:[
@@ -26,7 +28,9 @@ import { MatButtonModule,
         MatListModule,
         MatIconModule,
         MatCardModule,
-        MatGridListModule
+        MatGridListModule,
+        MatTableModule,
+        MatPaginatorModule
     ],
     exports:[
         MatButtonModule,
@@ -37,7 +41,9 @@ import { MatButtonModule,
         MatListModule,
         MatIconModule,
         MatCardModule,
-        MatGridListModule
+        MatGridListModule,
+        MatTableModule,
+        MatPaginatorModule
     ]
 })
 

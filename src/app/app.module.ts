@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 /* SECCION PARA IMPORTAR MODULOS*/
 import { MaterialModule } from './material.module';
+import { ChartsModule } from 'ng2-charts';
 
 /* SECCION PARA IMPORTAR RUTAS */
 import { APP_ROUTES } from './app.routes';
@@ -26,7 +27,9 @@ import { PagesModule } from './pages/pages.module';
     BrowserAnimationsModule, 
     FormsModule,
     APP_ROUTES,
-    PagesModule
+    PagesModule,
+    MaterialModule,
+    // ChartsModule
   ],
   providers: [
     APP_PROVIDERS

@@ -1,30 +1,112 @@
-<mat-card class="example-card">
-    <mat-card-title>Grafica de Barras</mat-card-title>
-    <mat-divider></mat-divider>
-    <mat-card-content>
-        <div>
-            <canvas id="canvas" width="1155px" height="400px">{{chart}}</canvas>
-        </div>
-</mat-card-content>
+<div class="section-two-graphics">
+    <mat-card class="section-two-cards">
+        <mat-card-title>Grafica Doughnut</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <app-graphic-doughnut [doughnutChartLabels] = "graficos.grafico1.labels"
+                                  [doughnutChartOptions] = "graficos.grafico2.options"
+                                  [doughnutChartData] = "graficos.grafico1.data"
+                                  doughnutChartType = "doughnut">
+            </app-graphic-doughnut>
+        </mat-card-content>
+        </mat-card>
+    <mat-card class="section-two-cards">
+        <mat-card-title>Grafica Pie</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <app-graphic-doughnut [doughnutChartLabels] = "graficos.grafico2.labels"
+                                  [doughnutChartOptions] = "graficos.grafico2.options"
+                                  [doughnutChartData] = "graficos.grafico2.data"
+                                  doughnutChartType = "pie"
+                                  ></app-graphic-doughnut>
+        </mat-card-content>
     </mat-card>
-      <div class="test">
-          <mat-card class="example-cardd">
-              <mat-card-title>Grafica Doughnut</mat-card-title>
-              <mat-divider></mat-divider>
-              <mat-card-content>
-                  <div>
-                      <canvas id="doughnut" width="670px">{{chartt}}</canvas>
-                  </div>
-              </mat-card-content>
-            </mat-card>
-          <mat-card class="example-carddd">
-              <mat-card-title>Grafica Pie</mat-card-title>
-              <mat-divider></mat-divider>
-              <mat-card-content>
-                  <div>
-                      <canvas id="pie" width="800px">{{pie}}</canvas>
-                    </div>
-              </mat-card-content>
-            </mat-card>
-      </div>
-      
+    <mat-card class="section-two-cards">
+        <mat-card-title>Grafica de Barras</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <app-graphic-bar></app-graphic-bar>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="section-two-cards">
+        <mat-card-title>Grafica de Barras</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <app-graphic-bar></app-graphic-bar>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="section-two-cards">
+        <mat-card-title>Grafica de Barras</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <app-graphic-bar></app-graphic-bar>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="section-two-cards">
+        <mat-card-title>Grafica de Barras</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <app-graphic-bar></app-graphic-bar>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="section-two-cards">
+        <mat-card-title>Grafica Doughnut</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <app-graphic-doughnut [doughnutChartLabels] = "graficos.grafico1.labels"
+                                  [doughnutChartOptions] = "graficos.grafico2.options"
+                                  [doughnutChartData] = "graficos.grafico1.data"
+                                  doughnutChartType = "doughnut">
+            </app-graphic-doughnut>
+        </mat-card-content>
+        </mat-card>
+    <mat-card class="section-two-cards">
+        <mat-card-title>Grafica Pie</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <app-graphic-doughnut [doughnutChartLabels] = "graficos.grafico2.labels"
+                                  [doughnutChartOptions] = "graficos.grafico2.options"
+                                  [doughnutChartData] = "graficos.grafico2.data"
+                                  doughnutChartType = "pie"
+                                  ></app-graphic-doughnut>
+        </mat-card-content>
+    </mat-card>    
+</div>
+<div class="simple-card">
+    <div class="example-container mat-elevation-z8">
+        <div class="example-header">
+            <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+        </div>
+        <mat-table #table [dataSource]="dataSource">
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+                <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            </ng-container>
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+                <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+                <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+        <mat-paginator #paginator
+                        [pageSize]="5"
+                        [pageSizeOptions]="[5, 10, 20]"
+                        [showFirstLastButtons]="true">
+        </mat-paginator>
+    </div>
+</div>
