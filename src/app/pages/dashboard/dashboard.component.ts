@@ -9,6 +9,7 @@ import { MatTableDataSource, MatPaginator } from '@angular/material';
 })
 export class DashboardComponent implements OnInit {
 
+  /** FUENTE DE DATOS QUE RELLENA LAS GRAFICAS */
     graficos: any = {
         'grafico1': {
           'labels': ['Con Frijoles', 'Con Natilla', 'Con tocino'],
@@ -48,10 +49,6 @@ export class DashboardComponent implements OnInit {
           'borderColor': ['rgba(255,99,132,1)','rgba(54, 162, 235, 1)']
         },
       };
-
-  chart:any = [];
-  doughnut:any = [];
-  pie:any=[];
 
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);

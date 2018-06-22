@@ -7,15 +7,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GraphicDoughnutComponent implements OnInit {
 
-  @Input() doughnutChartOptions:Array<any> = [];
+  @Input() doughnutChartOptions:Array<any> = [{}];
   @Input() doughnutChartLabels:string[] = [];
   @Input() doughnutChartData:string[] = [];
   @Input() doughnutChartType:string = '';
-  
 
   constructor() { }
 
   ngOnInit() {
   }
 
+}
+
+export interface ColorOptions {
+  backgroundColor?:string[],
+  borderColor?:string[],
+  borderWidth?:number
 }
